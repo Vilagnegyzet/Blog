@@ -125,11 +125,11 @@
 
     <div class="inner">
 
-        {{#get "posts" filter="tag:aktualis+featured:false" include="authors,tags" limit="3"}}
+        {{#get "posts" filter="tag:new-things+featured:false" include="authors,tags" limit="3"}}
         <div class="site-section">
             <header class="site-section-header">
-                <h2 class="site-section-title">Aktuális</h2>
-                <a class="site-section-morelink" href="{{@blog.url}}/cimkek/aktualis/">Olvass tovább {{> "icons/arrow-right-small"}}</a>
+                <h2 class="site-section-title">Product Updates</h2>
+                <a class="site-section-morelink" href="{{@blog.url}}/tag/new-things/">See more {{> "icons/arrow-right-small"}}</a>
             </header>
             <div class="post-feed">
                 {{#foreach posts}}
@@ -139,11 +139,11 @@
         </div>
         {{/get}}
 
-        {{#get "posts" filter="tag:diak-elet+featured:false" include="authors,tags" limit="3"}}
+        {{#get "posts" filter="tag:tutorials+featured:false" include="authors,tags" limit="3"}}
         <div class="site-section">
             <header class="site-section-header">
-                <h2 class="site-section-title">Diákélet</h2>
-                <a class="site-section-morelink" href="{{@blog.url}}cimkek/diak-elet/">Olvass tovább {{> "icons/arrow-right-small"}}</a>
+                <h2 class="site-section-title">Tutorials</h2>
+                <a class="site-section-morelink" href="{{@blog.url}}/tag/tutorials/">See more {{> "icons/arrow-right-small"}}</a>
             </header>
             <div class="post-feed">
                 {{#foreach posts}}
@@ -153,26 +153,29 @@
         </div>
         {{/get}}
 
-        {{#get "posts" filter="tag:kreativ-iromanyok" include="authors,tags" limit="3"}}
-          <div class="site-section">
+        {{#get "posts" filter="tag:careers" include="authors,tags" limit="3"  as |careers|}}
+        {{#if careers}}
+        <div class="site-section">
             <header class="site-section-header">
-                <h2 class="site-section-title">Kreatív irományok</h2>
-                <a class="site-section-morelink" href="{{@blog.url}}cimkek/kreativ-iromanyok/">Olvass tovább {{> "icons/arrow-right-small"}}</a>
+                <h2 class="site-section-title">Careers at Ghost</h2>
+                <a class="site-section-morelink" href="{{@blog.url}}/tag/careers/">See more {{> "icons/arrow-right-small"}}</a>
             </header>
             <div class="post-feed">
+
                 {{#foreach posts}}
                     {{> "post-card"}}
                 {{/foreach}}
+
             </div>
-           </div>
+        </div>
         {{/if}}
         {{/get}}
 
-        {{#get "posts" filter="tag:utinaplok+featured:false" include="authors,tags" limit="3"}}
+        {{#get "posts" filter="tag:inside-ghost+featured:false" include="authors,tags" limit="3"}}
         <div class="site-section">
             <header class="site-section-header">
-                <h2 class="site-section-title">Útinaplók</h2>
-                <a class="site-section-morelink" href="{{@blog.url}}/cimkek/utinaplok/">Olvass tovább {{> "icons/arrow-right-small"}}</a>
+                <h2 class="site-section-title">Behind the Scenes</h2>
+                <a class="site-section-morelink" href="{{@blog.url}}/tag/inside-ghost/">See more {{> "icons/arrow-right-small"}}</a>
             </header>
             <div class="post-feed">
                 {{#foreach posts}}
@@ -182,11 +185,11 @@
         </div>
         {{/get}}
 
-        {{#get "posts" filter="tag:ajanlok+featured:false" include="authors,tags" limit="3"}}
+        {{#get "posts" filter="tag:writing+featured:false" include="authors,tags" limit="3"}}
         <div class="site-section">
             <header class="site-section-header">
-                <h2 class="site-section-title">Ajánlók</h2>
-                <a class="site-section-morelink" href="{{@blog.url}}/cimkek/ajanlok/">Olvass tovább {{> "icons/arrow-right-small"}}</a>
+                <h2 class="site-section-title">Writing Tips</h2>
+                <a class="site-section-morelink" href="{{@blog.url}}/tag/writing/">See more {{> "icons/arrow-right-small"}}</a>
             </header>
             <div class="post-feed">
                 {{#foreach posts}}
